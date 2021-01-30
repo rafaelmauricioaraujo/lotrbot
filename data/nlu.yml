@@ -1,92 +1,182 @@
 version: "2.0"
 
 nlu:
-- intent: greet
-  examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
+# - intent: greet
+#   examples: |
+#     - hey
+#     - hello
+#     - hi
+#     - hello there
+#     - good morning
+#     - good evening
+#     - moin
+#     - hey there
+#     - let's go
+#     - hey dude
+#     - goodmorning
+#     - goodevening
+#     - good afternoon
 
-- intent: goodbye
+- intent: saudacao
   examples: |
-    - good afternoon
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
+    - Oi
+    - Ola
+    - Opa
+    - E ai
+    - bom dia
+    - boa tarde
+    - boa noite
+    - fala ai
+    - alou
+    - diga
+    - E ae
+    - ueba
 
-- intent: affirm
-  examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
+# - intent: goodbye
+#   examples: |
+#     - good afternoon
+#     - cu
+#     - good by
+#     - cee you later
+#     - good night
+#     - bye
+#     - goodbye
+#     - have a nice day
+#     - see you around
+#     - bye bye
+#     - see you later
 
-- intent: deny
+- intent: despedida
   examples: |
-    - no
+    - até logo
+    - tchau
+    - falou
+    - até mais
+    - xau
+    - ate
+    - vou indo
+    - tenha um bom dia
+    - adeus
+    - vlw flw
+    - ate outro dia
+
+# - intent: affirm
+#   examples: |
+#     - yes
+#     - y
+#     - indeed
+#     - of course
+#     - that sounds good
+#     - correct
+
+- intent: afirmacao
+  examples: |
+    - sim
+    - s
+    - claro
+    - com certeza
+    - concordo
+    - certo
+
+# - intent: deny
+#   examples: |
+#     - no
+#     - n
+#     - never
+#     - I don't think so
+#     - don't like that
+#     - no way
+#     - not really
+
+- intent: negacao
+  examples: |
+    - nao
     - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
+    - nunca
+    - jamais
+    - melhor não
+    - sem condicoes
+    - acho que nao
 
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
+# - intent: mood_great
+#   examples: |
+#     - perfect
+#     - great
+#     - amazing
+#     - feeling like a king
+#     - wonderful
+#     - I am feeling very good
+#     - I am great
+#     - I am amazing
+#     - I am going to save the world
+#     - super stoked
+#     - extremely good
+#     - so so perfect
+#     - so good
+#     - so perfect
 
-- intent: mood_unhappy
+- intent: bom_humor
   examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+    - perfeito
+    - excelente
+    - otimo
+    - adorei
+    - maravilhoso
+    - estou me sentindo otimo
+    - estou me sentido excelente
+    - estou otimo
+    - agora estou me sentindo bem
+    - estou feliz
+    - me alegrei
+    - muito muito bom
+    - nossa que otimo
+    - estou bem melhor agora
 
-- intent: bot_challenge
+# - intent: mood_unhappy
+#   examples: |
+#     - my day was horrible
+#     - I am sad
+#     - I don't feel very well
+#     - I am disappointed
+#     - super sad
+#     - I'm so sad
+#     - sad
+#     - very sad
+#     - unhappy
+#     - not good
+#     - not very good
+#     - extremly sad
+#     - so saad
+#     - so sad
+
+- intent: mau_humor
   examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+    - tudo horrivel
+    - triste
+    - so tristeza
+    - decepcionado
+    - so decepcao
+    - muito triste
+    - infeliz
+    - so derrota
+    - mau
+    - bem ruim
+    - nao muito bem
+    - muito mau
+    - ta foda
+    - ta tudo errado
+    - ta dando errado
+
+# - intent: bot_challenge
+#   examples: |
+#     - are you a bot?
+#     - are you a human?
+#     - am I talking to a bot?
+#     - am I talking to a human?
+
+- intent: bot_desafio
+  examples: |
+    - voce eh um robo?
+    - voce eh humano?
+    - estou falando com um robo?
+    - estou falando com um humano?

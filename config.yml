@@ -1,6 +1,7 @@
 # Configuration for Rasa NLU.
 # https://rasa.com/docs/rasa/nlu/components/
-language: en
+# language: en
+language: pt-br
 
 pipeline:
 # # No configuration for the NLU pipeline was provided. The following default pipeline was used to train your model.
@@ -22,6 +23,11 @@ pipeline:
 #   - name: FallbackClassifier
 #     threshold: 0.3
 #     ambiguity_threshold: 0.1
+
+    - name: "SpacyNLP"
+    # language model to load
+      model: "pt_core_news_md"
+      case_sensitive: True
 
 # Configuration for Rasa Core.
 # https://rasa.com/docs/rasa/core/policies/

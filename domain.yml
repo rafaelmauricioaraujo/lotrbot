@@ -1,33 +1,59 @@
 version: "2.0"
 
 intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
+  # - greet
+  - saudacao
+  # - goodbye
+  - despedida
+  # - affirm
+  - afirmacao
+  # - deny
+  - negacao
+  # - mood_great
+  - bom_humor
+  # - mood_unhappy
+  - mau_humor
+  # - bot_challenge
+  - bot_desafio
 
 responses:
-  utter_greet:
-  - text: "Hey! How are you?"
+  # utter_greet:
+  # - text: "Hey! How are you?"
 
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
+  pronunciar_saudacao:
+  - text: "Olá! Como vai você?"
+
+  # utter_cheer_up:
+  # - text: "Here is something to cheer you up:"
+  #   image: "https://i.imgur.com/nGF1K8f.jpg"
+  
+  pronunciar_anime_se:
+  - text: "Aqui, uma coisa pra te animar:"
     image: "https://i.imgur.com/nGF1K8f.jpg"
 
-  utter_did_that_help:
-  - text: "Did that help you?"
+  # utter_did_that_help:
+  # - text: "Did that help you?"
 
-  utter_happy:
-  - text: "Great, carry on!"
+  pronunciar_te_ajudou:
+  - text: "te ajudou?"
 
-  utter_goodbye:
-  - text: "Bye"
+  # utter_happy:
+  # - text: "Great, carry on!"
 
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  pronunciar_felicidade:
+  - text: "Que ótimo, fique bem"
+
+  # utter_goodbye:
+  # - text: "Bye"
+
+  pronunciar_despedida:
+  - text: "Tchau"
+
+  # utter_iamabot:
+  # - text: "I am a bot, powered by Rasa."
+
+  pronunciar_sourobo:
+  - text: "Sou um robô, criado pelo Rasa."
 
 session_config:
   session_expiration_time: 60
