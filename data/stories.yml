@@ -32,26 +32,37 @@ stories:
 - story: caminho feliz
   steps:
   - intent: saudacao
-  - action: pronunciar_saudacao
+  - action: utter_saudacao
   - intent: bom_humor
-  - action: pronunciar_felicidade
+  - action: utter_felicidade
 
 - story: caminho triste 1
   steps:
   - intent: saudacao
-  - action: pronunciar_saudacao
+  - action: utter_saudacao
   - intent: mau_humor
-  - action: pronunciar_anime_se
-  - action: pronunciar_te_ajudou
+  - action: utter_anime_se
+  - action: utter_te_ajudou
   - intent: afirmacao
-  - action: pronunciar_felicidade
+  - action: utter_felicidade
 
 - story: caminho triste 2
   steps:
   - intent: saudacao
-  - action: pronunciar_saudacao
+  - action: utter_saudacao
   - intent: mau_humor
-  - action: pronunciar_anime_se
-  - action: pronunciar_te_ajudou
+  - action: utter_anime_se
+  - action: utter_te_ajudou
   - intent: negacao
-  - action: pronunciar_despedida
+  - action: utter_despedida
+
+- story: interactive_story_1
+  steps:
+  - intent: saudacao
+  - action: utter_saudacao
+  - intent: mau_humor
+  - action: utter_anime_se
+  - action: utter_te_ajudou
+  - intent: afirmacao
+  - action: utter_felicidade
+  - intent: stop

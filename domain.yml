@@ -1,60 +1,32 @@
-version: "2.0"
-
-intents:
-  # - greet
-  - saudacao
-  # - goodbye
-  - despedida
-  # - affirm
-  - afirmacao
-  # - deny
-  - negacao
-  # - mood_great
-  - bom_humor
-  # - mood_unhappy
-  - mau_humor
-  # - bot_challenge
-  - bot_desafio
-
-responses:
-  # utter_greet:
-  # - text: "Hey! How are you?"
-
-  pronunciar_saudacao:
-  - text: "Olá! Como vai você?"
-
-  # utter_cheer_up:
-  # - text: "Here is something to cheer you up:"
-  #   image: "https://i.imgur.com/nGF1K8f.jpg"
-  
-  pronunciar_anime_se:
-  - text: "Aqui, uma coisa pra te animar:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  # utter_did_that_help:
-  # - text: "Did that help you?"
-
-  pronunciar_te_ajudou:
-  - text: "te ajudou?"
-
-  # utter_happy:
-  # - text: "Great, carry on!"
-
-  pronunciar_felicidade:
-  - text: "Que ótimo, fique bem"
-
-  # utter_goodbye:
-  # - text: "Bye"
-
-  pronunciar_despedida:
-  - text: "Tchau"
-
-  # utter_iamabot:
-  # - text: "I am a bot, powered by Rasa."
-
-  pronunciar_sourobo:
-  - text: "Sou um robô, criado pelo Rasa."
-
+version: '2.0'
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+intents:
+- stop
+- mau_humor
+- afirmacao
+- saudacao
+- despedida
+- negacao
+- bom_humor
+- bot_desafio
+responses:
+  utter_saudacao:
+  - text: Olá! Como vai você?
+  utter_anime_se:
+  - text: 'Aqui, uma coisa pra te animar:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_te_ajudou:
+  - text: te ajudou?
+  utter_felicidade:
+  - text: Que ótimo, fique bem
+  utter_despedida:
+  - text: Tchau
+  utter_sourobo:
+  - text: Sou um robô, criado pelo Rasa.
+actions:
+- utter_anime_se
+- utter_felicidade
+- utter_saudacao
+- utter_te_ajudou

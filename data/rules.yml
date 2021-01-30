@@ -15,9 +15,9 @@ rules:
 - rule: Se despedir sempre que o usuario se despedir
   steps:
   - intent: despedida
-  - action: pronunciar_despedida
+  - action: utter_despedida
 
 - rule: Fala 'sou um robô' sempre que o usuario desafiar
   steps:
   - intent: bot_desafio
-  - action: pronunciar_sourobo
+  - action: utter_sourobo
