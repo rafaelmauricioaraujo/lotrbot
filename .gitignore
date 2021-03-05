@@ -133,3 +133,6 @@ dmypy.json
 
 # pyvenv
 pyvenv.cfg
+
+# virtualenv
+Scripts/*
