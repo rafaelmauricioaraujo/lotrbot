@@ -136,3 +136,7 @@ pyvenv.cfg
 
 # virtualenv
 Scripts/*
+
+# rasa credentials and endpoints
+credentials.yml
+endpoints.yml
