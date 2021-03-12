@@ -22,6 +22,16 @@ intents:
 entities: []
 slots: {}
 responses:
+  utter_apresentation:
+  - text: Hi, welcome to a Middle-earth adventure. Please let me introduce my self.
+  - text: Hello there, welcome to a Middle-earth. Please let me introduce my self.
+  - text: Hello stranger, welcome to a Middle-earth. I will be your guide in your journey.
+  - text: Hello sir, welcome to a Middle-earth. I will be your guide in your journey, please, let me introduce my self
+  utter_whoiam:
+  - text: I'm a RPG Master Bot, the first of my kind. I will guide you in a great adventure.
+  - text: I'm a RPG Master Bot, the first of my kind. I hope that you is ready to a danger adventure.
+  - text: I'm the first RPG Master Bot. I hope that you is ready to a danger adventure.
+  - text: I'm a RPG Master Bot. I hope that you is ready to a danger adventure.
   utter_greet:
   - text: Hey! How are you?
   utter_cheer_up:
