@@ -6,26 +6,29 @@ stories:
   steps:
   - intent: greet
   - action: utter_apresentation
-  - action: utter_what_your_name
-  - intent: mood_great
-  - action: utter_happy
+  - action: utter_lets_begin
+  - intent: affirm
+  - action: utter_inform_how_works
+  - action: utter_ask_if_understand
+  - intent: affirm
+  - action: utter_ask_type
 
-# - story: sad path 1
-#   steps:
-#   - intent: greet
-#   - action: utter_apresentation
-#   - intent: mood_unhappy
-#   - action: utter_cheer_up
-#   - action: utter_did_that_help
-#   - intent: affirm
-#   - action: utter_happy
+- story: not ready
+  steps:
+  - intent: greet
+  - action: utter_apresentation
+  - action: utter_lets_begin
+  - intent: deny
+  - action: utter_tell_me_when
+  - action: utter_goodbye
 
-# - story: sad path 2
-#   steps:
-#   - intent: greet
-#   - action: utter_apresentation
-#   - intent: mood_unhappy
-#   - action: utter_cheer_up
-#   - action: utter_did_that_help
-#   - intent: deny
-#   - action: utter_goodbye
+- story: more information
+  steps:
+  - intent: greet
+  - action: utter_apresentation
+  - action: utter_lets_begin
+  - intent: affirm
+  - action: utter_inform_how_works
+  - action: utter_ask_if_understand
+  - intent: deny
+  - action: utter_inform_how_rpg_work

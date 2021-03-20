@@ -29,6 +29,24 @@ responses:
   utter_apresentation:
   - text: Hi, I'm a RPG Master bot, the first of my kind.
   - text: Hi, I'm a RPG Master bot, the first of my kind. I'll be your guide in Middle-earth.
+  utter_lets_begin:
+  - text: Shall we began?
+  - text: So, let start?
+  - text: Well, are you ready?
+  utter_tell_me_when:
+  - text: Ok, no worries, tell me when you are ready
+  - text: thats ok, tell me when you are ready
+  - text: no problems, just tell me when we should start
+  utter_inform_how_works:
+  - text: To play a RPG Game, you will need a character. I will provide a list and you have to choose one.
+  - text: To play a RPG Game, you will need a character, a fictional persona you create. I will provide a list and you have to choose one.
+  utter_inform_how_rpg_work:
+  - text: This is a roleplaying game. It's diferent from card games, board games, video games, and most other kinds of games. When you play a roleplaying game, your objective isn't to win. Instead, your goal is to have fun with your friends by telling a fantasy story in which characters you have created.
+  utter_ask_if_understand:
+  - text: Are you keep up?
+  - text: Everthing ok so far?
+  utter_ask_type:
+  - text: So, what type is your hero?
   utter_what_your_name:
   - text: What your name?
   - text: Please, tell me your name
