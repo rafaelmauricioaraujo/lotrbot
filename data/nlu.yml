@@ -91,6 +91,14 @@ nlu:
     - so saad
     - so sad
 
+- intent: general_questions
+  examples: |
+    - what is [rpg]{"entity":"inform"}
+    - tell me about [rpg]{"entity":"inform"}
+    - please, explain [rpg game]{"entity":"inform"}
+    - explain how that [game]{"entity":"inform"} works
+    - whats mean [rpg game]{"entity":"inform"}
+
 - intent: bot_challenge
   examples: |
     - are you a bot?

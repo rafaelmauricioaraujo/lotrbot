@@ -17,22 +17,24 @@ intents:
     use_entities: true
 - mood_unhappy:
     use_entities: true
+- general_questions:
+    use_entities: true
 - bot_challenge:
     use_entities: true
 - nlu_fallback:
     use_entities: true
 - out_of_scope:
     use_entities: true
-entities: []
+entities: [inform]
 slots: {}
 responses:
   utter_apresentation:
   - text: Hi, I'm a RPG Master bot, the first of my kind.
   - text: Hi, I'm a RPG Master bot, the first of my kind. I'll be your guide in Middle-earth.
   utter_lets_begin:
-  - text: Shall we began?
-  - text: So, let start?
-  - text: Well, are you ready?
+  - text: Shall we began a new adventure?
+  - text: So, let start a new adventure?
+  - text: Well, are you ready to a adventure?
   utter_tell_me_when:
   - text: Ok, no worries, tell me when you are ready
   - text: thats ok, tell me when you are ready
@@ -45,6 +47,8 @@ responses:
   utter_ask_if_understand:
   - text: Are you keep up?
   - text: Everthing ok so far?
+  inform_links_to_help:
+  - text: Here some link to more information, 'https://en.wikipedia.org/wiki/Role-playing_game'
   utter_ask_type:
   - text: So, what type is your hero?
   utter_what_your_name:
@@ -67,6 +71,6 @@ responses:
   - text: Sorry, I can't handle that request.
   utter_please_rephrase:
   - text: I'm sorry, I didn't quite understand that. Could you rephrase?
-actions: []
+actions: [action_get_heores]
 forms: {}
 e2e_actions: []

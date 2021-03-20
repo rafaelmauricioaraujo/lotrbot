@@ -11,6 +11,7 @@ stories:
   - action: utter_inform_how_works
   - action: utter_ask_if_understand
   - intent: affirm
+  - action: action_get_heores
   - action: utter_ask_type
 
 - story: not ready
@@ -22,7 +23,7 @@ stories:
   - action: utter_tell_me_when
   - action: utter_goodbye
 
-- story: more information
+- story: more information about rpg
   steps:
   - intent: greet
   - action: utter_apresentation
@@ -32,3 +33,5 @@ stories:
   - action: utter_ask_if_understand
   - intent: deny
   - action: utter_inform_how_rpg_work
+  - intent: general_questions
+  - action: inform_links_to_help
