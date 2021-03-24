@@ -32,6 +32,10 @@ from typing import Any, Text, Dict, List
 #
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
+import sys
+sys.path.append('..')
+
+from database.database import get_heroes, close
 
 
 class ActionGetHeroes(Action):
@@ -43,6 +47,15 @@ class ActionGetHeroes(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        dispatcher.utter_message(text="Hello World!")
+        print('action called')
+
+        cursor = get_heroes()
+        results = [hero for hero in cursor]
+        heores_list = ''
+        for result in results:
+            heores_list += result['name'] + '\n'
+
+        dispatcher.utter_message(text=heores_list)
+        close()
 
         return []
