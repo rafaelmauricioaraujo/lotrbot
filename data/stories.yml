@@ -13,6 +13,7 @@ stories:
   - intent: affirm
   - action: action_get_heores
   - action: utter_ask_type
+  - intent: inform_hero
 
 - story: not ready
   steps:

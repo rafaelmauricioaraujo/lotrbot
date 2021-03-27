@@ -25,8 +25,13 @@ intents:
     use_entities: true
 - out_of_scope:
     use_entities: true
-entities: [inform]
-slots: {}
+- inform_hero:
+    use_entities: true
+entities: [inform_hero, inform, hero]
+slots: 
+    hero:
+        type: text
+
 responses:
   utter_apresentation:
   - text: Hi, I'm a RPG Master bot, the first of my kind.

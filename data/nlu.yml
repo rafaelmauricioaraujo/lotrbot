@@ -45,6 +45,12 @@ nlu:
     - of course
     - that sounds good
     - correct
+    - ok
+    - yep
+    - YEAH
+    - yeah
+    - sure
+    - right
 
 - intent: deny
   examples: |
@@ -105,3 +111,8 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
+- intent: inform_hero
+  examples: |
+   - [menelcar](hero)
+   - [gror](hero)

@@ -47,8 +47,6 @@ class ActionGetHeroes(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        print('action called')
-
         cursor = get_heroes()
         results = [hero for hero in cursor]
         heores_list = ''
