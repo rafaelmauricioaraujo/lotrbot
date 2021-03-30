@@ -1,3 +1,4 @@
 {
-    "python.pythonPath": "C:\\Users\\rafae\\Documents\\lotrbot\\Scripts\\python.exe"
+    "python.pythonPath": "C:\\Users\\rafae\\Documents\\lotrbot\\Scripts\\python.exe",
+    "python.formatting.provider": "autopep8"
 }

@@ -8,8 +8,12 @@ client = MongoClient(os.getenv("DATABASE"))
 db = client.dblotrbot
 
 def get_heroes():
-    print('find heores called')
+    print('heores')
     return db.heroes.find({})
+
+def get_heroes_attributes(hero):
+    print('heroes attributes')
+    return db.heroes.find({"name":hero})
 
 def close():
     return client.close()

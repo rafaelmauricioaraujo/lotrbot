@@ -14,6 +14,11 @@ stories:
   - action: action_get_heores
   - action: utter_ask_type
   - intent: inform_hero
+  - action: utter_confirm_hero
+  - intent: affirm
+  - action: utter_ask_if_get_attributes
+  - intent: affirm
+  - action: action_get_heroes_attributes
 
 - story: not ready
   steps:

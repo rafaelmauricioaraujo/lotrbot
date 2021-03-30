@@ -52,15 +52,29 @@ responses:
   utter_ask_if_understand:
   - text: Are you keep up?
   - text: Everthing ok so far?
+  - text: so far so good?
   inform_links_to_help:
   - text: Here some link to more information, 'https://en.wikipedia.org/wiki/Role-playing_game'
+  - text: to more information, please check it out 'https://en.wikipedia.org/wiki/Role-playing_game'
+  utter_wait_minute:
+  - text: right, wait a wait a minute
   utter_ask_type:
-  - text: So, what type is your hero?
+  - text: So, which your hero?
+  - text: now tell me which your hero?
+  utter_confirm_hero:
+  - text: Ok, do you wanna play wih {hero}?
+  - text: humm, {hero}, interesting
+  - text: oh, {hero}, good choice
+  utter_ask_if_get_attributes:
+  - text: Do you wanna know the hero's attributes?
+  - text: Can i show you the attributes of hero that you choose?
+  - text: do you whould like know the {hero} attributes?, I mean, his strength, characteristics?
   utter_what_your_name:
   - text: What your name?
   - text: Please, tell me your name
   utter_greet:
   - text: Hey! How are you?
+  - text: Hey! How you doing?
   utter_cheer_up:
   - image: https://i.imgur.com/nGF1K8f.jpg
     text: 'Here is something to cheer you up:'
@@ -76,6 +90,8 @@ responses:
   - text: Sorry, I can't handle that request.
   utter_please_rephrase:
   - text: I'm sorry, I didn't quite understand that. Could you rephrase?
-actions: [action_get_heores]
+actions: 
+  - action_get_heores
+  - action_get_heroes_attributes
 forms: {}
 e2e_actions: []
