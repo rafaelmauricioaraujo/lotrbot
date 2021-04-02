@@ -18,7 +18,8 @@ stories:
   - intent: affirm
   - action: utter_ask_if_get_attributes
   - intent: affirm
-  - action: action_get_heroes_attributes
+  - action: action_get_attributes
+  - action: utter_lets_begin
 
 - story: not ready
   steps:

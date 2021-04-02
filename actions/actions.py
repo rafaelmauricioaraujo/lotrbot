@@ -63,7 +63,7 @@ class ActionGetHeroes(Action):
 class ActionGetHeroesAttribuites(Action):
 
     def name(self) -> Text:
-        return "action_get_heores_attributes"
+        return "action_get_attributes"
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,

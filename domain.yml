@@ -90,8 +90,8 @@ responses:
   - text: Sorry, I can't handle that request.
   utter_please_rephrase:
   - text: I'm sorry, I didn't quite understand that. Could you rephrase?
-actions: 
+actions:
   - action_get_heores
-  - action_get_heroes_attributes
+  - action_get_attributes
 forms: {}
 e2e_actions: []

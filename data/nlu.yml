@@ -115,4 +115,14 @@ nlu:
 - intent: inform_hero
   examples: |
    - [menelcar](hero)
+   - I like [menelcar](hero)
+   - hum, i choose [menelcar](hero)
+   - ok, I prefeer [menelcar](hero)
+   - nice, i whould like to play with [menelcar](hero)
    - [gror](hero)
+   - i like [gror](hero)
+   - hum, i choose [gror](hero)
+   - ok, nice, i prefeer [gror](hero)
+   - nice, i whould like to play with [gror](hero)
+   - [gror](hero), i choose you
+   - let's do this [gror](gror)
