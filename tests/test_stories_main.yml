@@ -1,0 +1,36 @@
+#### This file contains tests to evaluate that your bot behaves as expected.
+#### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
+
+stories:
+- story: happy path 1
+  steps:
+  - user: |
+      hello there!
+    intent: greet
+  - action: utter_apresentation
+  - action: utter_lets_begin
+  - user: |
+      yes
+    intent: affirm
+  - action: utter_inform_how_works
+  - action: utter_ask_if_understand
+  - user: |
+      yes
+  - action: action_get_heores
+  - action: utter_ask_which_hero
+  - user: |
+      menelcar
+  - intent: inform_hero
+  - action: utter_confirm_hero
+  - user: |
+      yes
+  - intent: affirm
+  - action: utter_ask_if_get_attributes
+  - user: |
+      yes
+  - intent: affirm
+  - action: action_get_heroes_attributes
+  
+
+  
+

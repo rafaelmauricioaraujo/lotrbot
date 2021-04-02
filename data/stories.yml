@@ -12,7 +12,7 @@ stories:
   - action: utter_ask_if_understand
   - intent: affirm
   - action: action_get_heores
-  - action: utter_ask_type
+  - action: utter_ask_which_hero
   - intent: inform_hero
   - action: utter_confirm_hero
   - intent: affirm

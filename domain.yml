@@ -58,7 +58,7 @@ responses:
   - text: to more information, please check it out 'https://en.wikipedia.org/wiki/Role-playing_game'
   utter_wait_minute:
   - text: right, wait a wait a minute
-  utter_ask_type:
+  utter_ask_which_hero:
   - text: So, which your hero?
   - text: now tell me which your hero?
   utter_confirm_hero:
