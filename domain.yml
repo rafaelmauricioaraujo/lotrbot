@@ -1,37 +1,27 @@
 version: '2.0'
-config:
-  store_entities_as_slots: true
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-- greet:
-    use_entities: true
-- goodbye:
-    use_entities: true
-- affirm:
-    use_entities: true
-- deny:
-    use_entities: true
-- mood_great:
-    use_entities: true
-- mood_unhappy:
-    use_entities: true
-- general_questions:
-    use_entities: true
-- bot_challenge:
-    use_entities: true
-- nlu_fallback:
-    use_entities: true
-- out_of_scope:
-    use_entities: true
-- inform_hero:
-    use_entities: true
-entities: [inform_hero, inform, hero]
-slots: 
-    hero:
-        type: text
-
+- inform_hero
+- greet
+- affirm
+- goodbye
+- deny
+- mood_great
+- mood_unhappy
+- general_questions
+- bot_challenge
+- nlu_fallback
+- out_of_scope
+entities:
+- hero
+- inform
+- inform_hero
+slots:
+  hero:
+    type: text
+    influence_conversation: true
 responses:
   utter_apresentation:
   - text: Hi, I'm a RPG Master bot, the first of my kind.
@@ -91,7 +81,12 @@ responses:
   utter_please_rephrase:
   - text: I'm sorry, I didn't quite understand that. Could you rephrase?
 actions:
-  - action_get_heores
-  - action_get_attributes
-forms: {}
-e2e_actions: []
+- action_get_attributes
+- action_get_heores
+- utter_apresentation
+- utter_ask_if_get_attributes
+- utter_ask_if_understand
+- utter_ask_which_hero
+- utter_confirm_hero
+- utter_inform_how_works
+- utter_lets_begin

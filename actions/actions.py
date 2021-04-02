@@ -74,7 +74,7 @@ class ActionGetHeroesAttribuites(Action):
         print('hero from tracker:  ', hero)
 
         cursor = get_heroes_attributes(hero)
-        print("cursor: ", cursor)
+        print('cursor.race: ', cursor.race)
 
         dispatcher.utter_message(text=cursor)
         close()

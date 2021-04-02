@@ -42,3 +42,24 @@ stories:
   - action: utter_inform_how_rpg_work
   - intent: general_questions
   - action: inform_links_to_help
+
+  - story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_apresentation
+  - action: utter_lets_begin
+  - intent: affirm
+  - action: utter_inform_how_works
+  - action: utter_ask_if_understand
+  - intent: affirm
+  - action: action_get_heores
+  - action: utter_ask_which_hero
+  - intent: inform_hero
+    entities:
+    - hero: menelcar
+  - slot_was_set:
+    - hero: menelcar
+  - action: utter_confirm_hero
+  - action: utter_ask_if_get_attributes
+  - intent: affirm
+  - action: action_get_attributes

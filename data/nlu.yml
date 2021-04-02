@@ -1,12 +1,10 @@
 version: "2.0"
-
 nlu:
 - intent: out_of_scope
   examples: |
     - I want to order food
     - What is 2 + 2?
     - Who's the US President?
-
 - intent: greet
   examples: |
     - hey
@@ -22,7 +20,7 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
-
+    - Hi
 - intent: goodbye
   examples: |
     - good afternoon
@@ -36,7 +34,6 @@ nlu:
     - see you around
     - bye bye
     - see you later
-
 - intent: affirm
   examples: |
     - yes
@@ -51,7 +48,7 @@ nlu:
     - yeah
     - sure
     - right
-
+    - Yes
 - intent: deny
   examples: |
     - no
@@ -61,7 +58,6 @@ nlu:
     - don't like that
     - no way
     - not really
-
 - intent: mood_great
   examples: |
     - perfect
@@ -79,7 +75,6 @@ nlu:
     - so good
     - so perfect
     - good
-
 - intent: mood_unhappy
   examples: |
     - my day was horrible
@@ -96,33 +91,31 @@ nlu:
     - extremly sad
     - so saad
     - so sad
-
 - intent: general_questions
   examples: |
-    - what is [rpg]{"entity":"inform"}
-    - tell me about [rpg]{"entity":"inform"}
-    - please, explain [rpg game]{"entity":"inform"}
-    - explain how that [game]{"entity":"inform"} works
-    - whats mean [rpg game]{"entity":"inform"}
-
+    - what is [rpg](inform)
+    - tell me about [rpg](inform)
+    - please, explain [rpg game](inform)
+    - explain how that [game](inform) works
+    - whats mean [rpg game](inform)
 - intent: bot_challenge
   examples: |
     - are you a bot?
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
-
 - intent: inform_hero
   examples: |
-   - [menelcar](hero)
-   - I like [menelcar](hero)
-   - hum, i choose [menelcar](hero)
-   - ok, I prefeer [menelcar](hero)
-   - nice, i whould like to play with [menelcar](hero)
-   - [gror](hero)
-   - i like [gror](hero)
-   - hum, i choose [gror](hero)
-   - ok, nice, i prefeer [gror](hero)
-   - nice, i whould like to play with [gror](hero)
-   - [gror](hero), i choose you
-   - let's do this [gror](gror)
+    - [menelcar](hero)
+    - I like [menelcar](hero)
+    - hum, i choose [menelcar](hero)
+    - ok, I prefeer [menelcar](hero)
+    - nice, i whould like to play with [menelcar](hero)
+    - [gror](hero)
+    - i like [gror](hero)
+    - hum, i choose [gror](hero)
+    - ok, nice, i prefeer [gror](hero)
+    - nice, i whould like to play with [gror](hero)
+    - [gror](hero), i choose you
+    - let's do this [gror](gror)
+    - i like [menelcar](hero)

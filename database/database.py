@@ -1,5 +1,6 @@
 from pymongo import MongoClient
 from dotenv import load_dotenv
+from bson.json_util import dumps
 import os
 
 load_dotenv()
