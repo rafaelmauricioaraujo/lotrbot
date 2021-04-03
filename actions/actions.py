@@ -69,14 +69,18 @@ class ActionGetHeroesAttribuites(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        print('get heroes attributes called')
+        print('action_get_attributes')
+        
         hero = tracker.get_slot("hero")
         print('hero from tracker:  ', hero)
 
         cursor = get_heroes_attributes(hero)
-        print('cursor.race: ', cursor.race)
+        results = [item for item in cursor]
+        message = ''
+        for result in results:
+            message += result + '\n'
 
-        dispatcher.utter_message(text=cursor)
+        dispatcher.utter_message(text=message)
         close()
 
         return []

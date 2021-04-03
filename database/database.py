@@ -9,12 +9,10 @@ client = MongoClient(os.getenv("DATABASE"))
 db = client.dblotrbot
 
 def get_heroes():
-    print('heores')
     return db.heroes.find({})
 
 def get_heroes_attributes(hero):
-    print('heroes attributes')
-    return db.heroes.find({"name":hero})
+    return db.heroes.find_one({"name": hero})
 
 def close():
     return client.close()
