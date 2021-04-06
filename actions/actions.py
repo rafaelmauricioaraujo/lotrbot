@@ -58,7 +58,6 @@ class ActionGetHeroes(Action):
         close()
 
         return []
-        # return [SlotSet('')]
 
 class ActionGetHeroesAttribuites(Action):
 
@@ -68,11 +67,8 @@ class ActionGetHeroesAttribuites(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
-        print('action_get_attributes')
         
         hero = tracker.get_slot("hero")
-        print('hero from tracker:  ', hero)
 
         cursor = get_heroes_attributes(hero)
         results = [item for item in cursor]
