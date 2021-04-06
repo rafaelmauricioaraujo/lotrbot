@@ -72,9 +72,10 @@ class ActionGetHeroesAttribuites(Action):
 
         cursor = get_heroes_attributes(hero)
         results = [item for item in cursor]
+
         message = ''
         for result in results:
-            message += result + '\n'
+            message = "the great {} is a hero from {} race and he always have his {} in hands".format(result['name'], result['race'], result['gears'][0]['main_gear']['name'])
 
         dispatcher.utter_message(text=message)
         close()
