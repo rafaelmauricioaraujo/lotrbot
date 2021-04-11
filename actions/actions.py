@@ -70,12 +70,25 @@ class ActionGetHeroesAttribuites(Action):
         
         hero = tracker.get_slot("hero")
 
-        cursor = get_heroes_attributes(hero)
-        results = [item for item in cursor]
+        message = get_heroes_attributes(hero)
 
-        message = ''
-        for result in results:
-            message = "the great {} is a hero from {} race and he always have his {} in hands".format(result['name'], result['race'], result['gears'][0]['main_gear']['name'])
+        dispatcher.utter_message(text=message)
+        close()
+
+        return []
+
+class ActionGetHeroesGears(Action):
+
+    def name(self) -> Text:
+        return "action_get_gears"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        hero = tracker.get_slot("hero")
+
+        message = get_heroes_gears(hero)
 
         dispatcher.utter_message(text=message)
         close()

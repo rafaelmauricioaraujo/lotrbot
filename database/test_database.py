@@ -1,5 +1,9 @@
-# import sys
-# sys.path.append('.')
+from pymongo import MongoClient
+from dotenv import load_dotenv
+import os
+
+client = MongoClient(os.getenv("DATABASE"))
+db = client.dblotrbot
 
 from database import get_heroes, close, get_heroes_attributes
 
@@ -17,16 +21,21 @@ def test_get_heroes():
 
 def test_get_heroes_attributes(hero):
     
-    cursor = get_heroes_attributes(hero)
-    results = [item for item in cursor]
-    # print('results: ', results)
-    message = ""
-    for result in results:
-        # print('result: ', result['gears'][0]['main_gear']['name'])
-        message = "the great {} is a hero from {} race and he always " \
-            "have his {} in hands".format(result['name'], result['race'], result['gears'][0]['main_gear']['name'])
-    
+    message = get_heroes_attributes(hero) 
     print(message)
 
+
+def test_get_heroes_gears(hero):
+
+    cursor = db.heroes.find({"name": hero})
+    
+    results = [item for item in cursor]
+    gears = ""
+    
+    for result in results['gears']:
+        print('result: ', result)
+    
+
 # test_get_heroes()
-test_get_heroes_attributes('menelcar')
+# test_get_heroes_attributes('menelcar')
+test_get_heroes_gears('menelcar')
