@@ -48,13 +48,8 @@ class ActionGetHeroes(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        cursor = get_heroes()
-        results = [hero for hero in cursor]
-        heores_list = ''
-        for result in results:
-            heores_list += result['name'] + '\n'
-
-        dispatcher.utter_message(text=heores_list)
+        heroes = get_heroes()
+        dispatcher.utter_message(text=heores)
         close()
 
         return []
@@ -69,9 +64,7 @@ class ActionGetHeroesAttribuites(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
         hero = tracker.get_slot("hero")
-
         message = get_heroes_attributes(hero)
-
         dispatcher.utter_message(text=message)
         close()
 
@@ -87,9 +80,7 @@ class ActionGetHeroesGears(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
         hero = tracker.get_slot("hero")
-
         message = get_heroes_gears(hero)
-
         dispatcher.utter_message(text=message)
         close()
 
