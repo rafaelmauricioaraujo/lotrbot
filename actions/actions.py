@@ -36,7 +36,7 @@ from rasa_sdk.events import SlotSet
 import sys
 sys.path.append('..')
 
-from database.database import get_heroes, close, get_heroes_attributes
+from database.database import get_heroes, get_heroes_attributes, get_heroes_gears, close
 
 
 class ActionGetHeroes(Action):
@@ -49,7 +49,7 @@ class ActionGetHeroes(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         heroes = get_heroes()
-        dispatcher.utter_message(text=heores)
+        dispatcher.utter_message(text=heroes)
         close()
 
         return []

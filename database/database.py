@@ -12,9 +12,9 @@ def get_heroes():
 
     cursor = db.heroes.find({})
     results = [hero for hero in cursor]
-    heores_list = ''
+    heroes_list = ''
     for result in results:
-        heores_list += result['name'] + '\n'
+        heroes_list += result['name'] + '\n'
 
     print('retrieving data from database - get heroes')
     return heroes_list
