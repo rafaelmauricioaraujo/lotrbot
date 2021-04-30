@@ -19,6 +19,7 @@ stories:
   - action: utter_ask_if_get_attributes
   - intent: affirm
   - action: action_get_attributes
+  - action: utter_ask_if_understand
   - action: utter_lets_begin
   - action: utter_describle_scenario_bree
 
@@ -64,3 +65,6 @@ stories:
   - action: utter_ask_if_get_attributes
   - intent: affirm
   - action: action_get_attributes
+  - action: utter_ask_if_understand
+  - action: utter_lets_begin
+  - action: utter_describle_scenario_bree
