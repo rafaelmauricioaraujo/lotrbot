@@ -20,6 +20,7 @@ stories:
   - intent: affirm
   - action: action_get_attributes
   - action: utter_lets_begin
+  - action: utter_describle_scenario_bree
 
 - story: not ready
   steps:
