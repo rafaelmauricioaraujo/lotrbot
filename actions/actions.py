@@ -36,7 +36,7 @@ from rasa_sdk.events import SlotSet
 import sys
 sys.path.append('..')
 
-from database.database import get_heroes, get_heroes_attributes, get_heroes_gears, close
+from database.database import get_heroes, get_heroes_attributes, get_heroes_gears, get_all_attributes, close
 
 
 class ActionGetHeroes(Action):
@@ -82,6 +82,23 @@ class ActionGetHeroesGears(Action):
         hero = tracker.get_slot("hero")
         message = get_heroes_gears(hero)
         dispatcher.utter_message(text=message)
+        close()
+
+        return []
+
+
+class ActionGetAllAtributtes(Action):
+
+    def name(self) -> Text:
+        return 'action_get_all_attributes'
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        hero = tracker.get_slot("hero")
+        all_att = get_all_attributes(hero)
+        dispatcher.utter_message(text=all_att)
         close()
 
         return []

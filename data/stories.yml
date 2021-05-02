@@ -2,7 +2,7 @@ version: "2.0"
 
 stories:
 
-- story: happy path
+- story: beginning of flow
   steps:
   - intent: greet
   - action: utter_apresentation
@@ -10,6 +10,11 @@ stories:
   - intent: affirm
   - action: utter_inform_how_works
   - action: utter_ask_if_understand
+  - checkpoint: check_asked_question
+
+- story: handle user affirm
+  steps:
+  - checkpoint: check_asked_question
   - intent: affirm
   - action: action_get_heores
   - action: utter_ask_which_hero
@@ -19,7 +24,28 @@ stories:
   - action: utter_ask_if_get_attributes
   - intent: affirm
   - action: action_get_attributes
-  - action: utter_ask_if_understand
+  - action: utter_more_att_or_begin_adventure
+  - checkpoint: check_asked_about_more_or_adventure
+
+- story: handle user deny
+  steps:
+  - checkpoint: check_asked_question
+  - intent: deny
+  - action: utter_tell_me_when
+  - action: utter_goodbye
+
+- story: handle user more attributes
+  steps:
+  - checkpoint: check_asked_about_more_or_adventure
+  - intent: more_attributes
+  - action: action_get_all_attributes
+  - action: utter_lets_begin
+  - action: utter_describle_scenario_bree
+
+  - story: handle user more attributes
+    steps:
+  - checkpoint: check_asked_about_more_or_adventure
+  - intent: lets_begin
   - action: utter_lets_begin
   - action: utter_describle_scenario_bree
 

@@ -82,6 +82,8 @@ responses:
   - text: I'm sorry, I didn't quite understand that. Could you rephrase?
   utter_describle_scenario_bree:
   - text: Located at the crossing of the North Road from Tharbad to Fornost Erain and the Great East Road from Mithlond to the Misty Mountains, Bre is built up against Bree Hill
+  utter_more_att_or_begin_adventure:
+  - text: Do you wanna get more attributes of {hero} or do you prefer began our adventure?
 actions:
 - action_get_attributes
 - action_get_heores

@@ -119,3 +119,22 @@ nlu:
     - [gror](hero), i choose you
     - let's do this [gror](gror)
     - i like [menelcar](hero)
+- intent: more_attributes
+  examples: |
+    - I wanna get more attributes
+    - tell me the attributes
+    - attributes, please
+    - all attributes
+    - i prefer get more about [menelcar](hero)
+    - i prefer get more about [gror](hero)
+    - more about
+    - more attributes
+
+- intent: lets_begin
+ examples: |
+    - No, lets begin
+    - I prefer adventure
+    - Lest go
+    - No, lets do this
+    - no, lets began
+    - I'm ready to adventure

@@ -46,6 +46,23 @@ def get_heroes_gears(hero):
     print('retrieving data from database - get heroes gears')
     return gears
 
+def get_all_attributes(hero):
+    
+    cursor = db.heroes.find({"name": hero})
+    
+    results = [item for item in cursor]
+    attributes = ""
+
+    for result in results:
+        attributes = "His a "+result['race']+" with "+str(result['health'])+' points of health and '+str(result['courage'])+' points of courage'
+    
+    print('result: ', results[0])
+    print('attributes: ', attributes)
+
+    return attributes
 
 def close():
     return client.close()
+
+
+get_all_attributes('menelcar')
