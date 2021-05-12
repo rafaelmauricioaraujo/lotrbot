@@ -14,6 +14,8 @@ intents:
 - bot_challenge
 - nlu_fallback
 - out_of_scope
+- more_attributes
+- lets_begin
 entities:
 - hero
 - inform
