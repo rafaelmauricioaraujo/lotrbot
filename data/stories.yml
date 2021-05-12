@@ -42,8 +42,8 @@ stories:
   - action: utter_lets_begin
   - action: utter_describle_scenario_bree
 
-  - story: handle user more attributes
-    steps:
+- story: handle user lets begin
+  steps:
   - checkpoint: check_asked_about_more_or_adventure
   - intent: lets_begin
   - action: utter_lets_begin

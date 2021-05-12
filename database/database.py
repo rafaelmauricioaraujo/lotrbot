@@ -54,15 +54,18 @@ def get_all_attributes(hero):
     attributes = ""
 
     for result in results:
-        attributes = "His a "+result['race']+" with "+str(result['health'])+' points of health and '+str(result['courage'])+' points of courage'
+        attributes = '''His a {} with {} points of health and {} points of courage his gears are {} with {} points of damage and {} of resistence
+        his have a {} as a secundary weapon'''.format(
+            result['race'], 
+            str(result['health']), 
+            str(result['courage']), 
+            result['gears'][0]['main_gear']['name'],
+            str(result['gears'][0]['main_gear']['damage']),
+            str(result['gears'][0]['main_gear']['resistence']),
+            result['gears'][1]['secundary'][0]['name'],
+            )
     
-    print('result: ', results[0])
-    print('attributes: ', attributes)
-
     return attributes
 
 def close():
     return client.close()
-
-
-get_all_attributes('menelcar')

@@ -94,3 +94,4 @@ actions:
 - utter_confirm_hero
 - utter_inform_how_works
 - utter_lets_begin
+- action_get_all_attributes

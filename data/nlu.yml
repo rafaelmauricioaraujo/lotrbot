@@ -131,7 +131,7 @@ nlu:
     - more attributes
 
 - intent: lets_begin
- examples: |
+  examples: |
     - No, lets begin
     - I prefer adventure
     - Lest go
